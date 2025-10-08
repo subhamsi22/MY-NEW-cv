@@ -1,9 +1,6 @@
 import './App.css';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
-import jkVideo from './public/jk.mp4';
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
 
@@ -30,7 +27,7 @@ export function Pic() {
 
   return (
     <div>
-<video id="gima" src={jkVideo} controls autoPlay loop muted></video>
+      <video id="gima" src="/pic/jk.mp4" controls autoPlay loop muted></video>
       <FontAwesomeIcon id="myloo" icon={faHtml5} size="3x" />
       <FontAwesomeIcon id="myjs" icon={faJs} size="3x" />
     </div>
