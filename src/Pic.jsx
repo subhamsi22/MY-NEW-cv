@@ -27,10 +27,19 @@ export function Pic() {
 
   return (
     <div>
-      <video id="gima" src="/public/jk.mp4" controls autoPlay loop muted></video>
+    <video
+  id="gima"
+  src="/pic/jk.mp4"
+  controls
+  autoPlay
+  loop
+  muted
+></video>
+
       <FontAwesomeIcon id="myloo" icon={faHtml5} size="3x" />
       <FontAwesomeIcon id="myjs" icon={faJs} size="3x" />
     </div>
   );
 }
+
 
