@@ -1,18 +1,33 @@
-import { useEffect } from 'react';
 import './App.css'
-function Moveing(){
+import {  useEffect, useRef } from "react";
+import {gsap} from 'gsap'
 
-    useEffect(()=>{
-const ball =  document.querySelector(".mo");
-document.addEventListener("mousemove", function(dets){
-gsap.to(ball,{
-    y:dets.y
-})
-})
-    },[]);
+
+
+function Moveing(){
+const starting_ofmoveing= useRef(null);
+useEffect(()=>{
+  const  handleMouseMove =(e)=>{
+    gsap.to(starting_ofmoveing.current,{
+      
+      left:e.clientX -12,
+      top:e.clientY -12,
+
+
+
+    });
+  };
+window.addEventListener("mousemove",handleMouseMove);
+
+
+
+
+
+},[])
+ 
   return(
     <div>
-<div className="mo">
+<div className="mo" ref={starting_ofmoveing}>
 
 </div>
     </div>
